@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="4"style="background: url('orig.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover" >
+<center>
+<button onclick="spinner1()" id="5">
+    <img height="100" width="100" src="39.png">
+</button>
+<button id="6" onclick="spinner2()">
+    <img height="100" width="120" src="61.png">
+</button>
+<button id="7" onclick="spinner3()">
+    <img height="100" width="100" src="s.png">
+</button></center>
+<center>
+<button id="8" onclick="spinner5()">
+    <img height="100" width="100" src="igr.jpg">
+</button>
+<button id="9" onclick="spinner6()">
+    <img height="100" width="120" src="ima.jpg">
+</button>
+<button id="10" onclick="spinner4()">
+    <img height="100" width="100" src="orig.jpg">
+</button></center>
+<br/>
+<center>
+<img onmousedown="rotate1()" onmouseout="rotate2()" onmouseup="rotate2()" height="300" src="s.png" id="0">
+    <audio src="Sound_19015%20(www.mp3cut.ru).mp3" id="78">
+
+    </audio>
+</center>
+<script>
+    i=0
+    function spinner1() {
+        document.getElementById('0').src="39.png"
+
+    }
+    function spinner2() {
+        document.getElementById('0').src="61.png"
+
+    }
+    function spinner3() {
+        document.getElementById('0').src="s.png"
+
+    }
+    i=0
+    function spinner4() {
+        document.getElementById('4').style="background: url('orig.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover"
+
+    }
+    function spinner5() {
+        document.getElementById('4').style="background: url('igr.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover"
+
+    }
+    function spinner6() {
+        document.getElementById('4').style="background: url('ima.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover"
+
+    }
+
+    rotate=false
+    function rotate1() {
+        rotate=true}
+    function rotate2() {
+        rotate=false
+    }
+
+    setInterval(function () {
+     if(rotate){
+        document.getElementById('78').play()
+         i+=10
+         document.getElementById('0').style='transform: rotate('+i+'deg)'
+     }
+    },1)
+
+
+</script>
+
+
+</body>
+</html>
